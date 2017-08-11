@@ -1,0 +1,132 @@
+#ready to play
+import time
+import random
+def looking(prechoice):
+    explore="You take a look around."
+    print(explore)
+    time.sleep(2)
+    print("What would you like to look at?")
+    print("Look at your bed (Bed)")
+    print("Look at desk (Desk)")
+    print("Look at your wardrobe (Wardrobe)")
+    print("Stop looking around (Stop)")
+    pre2=input("")
+    exploreroom=pre2.lower()
+    return exploreroom
+    
+def begin():
+    print("What would you like to do?")
+    print("Check inventory (Inventory)")
+    print("Leave your room (Leave room)")
+    print("Look around the room (Explore)")
+    pre1=input("")
+    prechoice=pre1.lower()
+    return prechoice
+    
+
+#print("Welcome to Narvalia.")
+#time.sleep(2)
+#print("")
+#print("The story of this great place is one that has been lost through the ages.")
+#time.sleep(3)
+#print("")
+#print("Forgotten by all but my family.")
+#time.sleep(2)
+#print("")
+#print("My family is a line of powerful mages that evaded the king's soldiers at almost every turn.")
+#time.sleep(4)
+#print("")
+#print("So let me tell you the story of an acient time, one of magic, poverty, racism, and an all around awful situation.")
+#time.sleep(6)
+#print("")
+#print("Ahem")
+#time.sleep(1)
+#print("")
+#print("Once apon a time, Narvalia was a beautiful place.")
+#time.sleep(3)
+#print("")
+#print("Until that is a mystical event took place that would change the world.")
+#time.sleep(3)
+#print("")
+#print("An event that would cause the greatest advances and the worst conflicts.")
+#time.sleep(4)
+#print("")
+#print("After a long night of rest you wake up")
+#time.sleep(3)
+
+###Game begins here###
+
+name=input("Enter your name or enter random: ")
+namel=name.lower()
+if namel=="random":
+    names=["Winerah", "Arcake", "Anjeff", "Savid", "Brito", "Gormamen", "Lin", "Gakim", "Thasevermark", "Riwyn", "Ingchar", "Ordlett", "Markdino", "Thaechet", "Garlas", "Winemax", "Nidic", "Donni",]
+    AIchoice=random.randint(0,17)
+    name=names[AIchoice]
+    print("So "+name+", you are a normal person who lives in a normal house with a normal family, I think you should go and see them.  After all, it is breakfast time.")
+else:
+    print("So "+name+", you are a normal person who lives in a normal house with a normal family, I think that you should go and see them.  After all, it is breakfast time.")
+    #time.sleep(4)
+    
+
+start="running"
+while start=="running":    
+    prechoice=begin()
+    
+
+    if prechoice=="inventory":
+        inventory="You have "
+        pen1=" your trusty pen"
+        clothing1=" normal clothing "
+        print(inventory+clothing1+"and"+pen1+".")
+        time.sleep(3)
+        print("")
+        #prechoice=begin()
+        
+    if prechoice=="explore":
+        exploreroom=looking(prechoice) 
+        
+            
+        if exploreroom =="bed":
+            print("A normal bed, brought to us by Lopino's.")
+            time.sleep(2)
+            print("")
+            exploreroom=looking(prechoice)
+              
+        if exploreroom =="desk":
+            print("A normal desk, Set got this from Lopino's if I'm not mistaken.")
+            time.sleep(2)
+            print("")
+            exploreroom=looking(prechoice)
+              
+        if exploreroom =="wardrobe":
+            print("I really need to clean this old thing out.  Many of these clothes I don't even use anymore.")
+            time.sleep(2)
+            print("")
+            exploreroom=looking(prechoice)
+
+        if exploreroom =="stop":
+            print("")
+            #exploreroom=prechoice=begin()
+            a=1
+
+    if prechoice=="leave":
+        start="stop"
+        print("As you open the door to your room, the smell of fresh eggs from the farm hits your nose.")
+            
+
+
+    
+#game="running"
+
+#while game == "running":
+    #Answer=input("What would you like to play or quit?")
+    #Answer=Answer.lower()
+    #if Answer=="play":
+        #a=1
+    #if Answer=="quit":
+        #game="False"
+        #print("I've never heard of a story where the hero quits but bye anyway")
+    #while Answer=="play":
+        #choice=input("Enter choice")
+        #if choice=="quit":
+            #Answer="quit"
