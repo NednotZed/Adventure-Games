@@ -152,9 +152,9 @@ while game=="running":
             start="stop"
             print("As you open the door to your room, the smell of fresh eggs from the farm hits your nose")
 #            time.sleep(3)
-            print("So you've finally woken up!  Just in time, I just finished you eggs.")
+            print(""" "So you've finally woken up!  Just in time, I just finished you eggs." """)
 #            time.sleep(3)
-            print("A letter came by while you were asleep.  I've put it on the table.")
+            print(""" "A letter came by while you were asleep.  I've put it on the table." """)
 #            time.sleep(3)
             print("")
 
@@ -245,32 +245,56 @@ while game=="running":
 
         if eggsandletter=="letter":
             dinningroom="stopped"
-            print(name+" sits down at the table and opens the letter.")
-#            time.sleep(2)
-            print("Mr. Narui, we regret to inform you that due to the recent blaze at the Polino's Furniture and Carvings in your area your slot and items within have been destroyed by the flames.")
-#            time.sleep(7)
-            print("Because of this we have given to you the 40 pieces that you used to buy the slot and the items within.  We hope we haven't lost you as a loyal customer.  Sincerely, Polino's Furniture and Carvings")
-#            time.sleep(7)
-            print("Holding the letter in his hand "+name+" was furious.  He had spent so much time and money creating the desk that was in his slot.")
-#            time.sleep(6)
-            print("But his anger was interupted by the screams coming from outside.")
-#            time.sleep(3)
-            print("Openning his front door "+name+" saw monsterous beasts chasing down and killing the neighbors and and workers in his community.")
-#            time.sleep(5)
-            print("He instructed his children and wife to head for the cellar.")
-#            time.sleep(3)
-            print("But before he could join them his neighbor was pushed to the ground and was being attacked by a beast.")
-#            time.sleep(5)
-            print("")
-            print("Deside carefully as this choice could effect the game and future events.")
-            print("")
-#            time.sleep(4)
+            if gender=="man":
+                print(name+" sits down at the table and opens the letter.")
+#               #time.sleep(2)
+                print(""" "Mr. Narui, we regret to inform you that due to the recent blaze at the Polino's Furniture and Carvings in your area your slot and items within have been destroyed by the flames." """)
+#               #time.sleep(7)
+                print(""" "Because of this we have given to you the 40 pieces that you used to buy the slot and the items within.  We hope we haven't lost you as a loyal customer.  Sincerely, Polino's Furniture and Carvings" """)
+#               #time.sleep(7)
+                print("Holding the letter in his hand "+name+" was furious.  He had spent so much time and money creating the desk that was in his slot.")
+#               #time.sleep(6)
+                print("But his anger was interupted by the screams coming from outside.")
+#               #time.sleep(3)
+                print("Openning his front door "+name+" saw monsterous beasts chasing down and killing the neighbors and and workers in his community.")
+#               #time.sleep(5)
+                print("He instructed his children and wife to head for the cellar.")
+#               #time.sleep(3)
+                print("But before he could join them his neighbor was pushed to the ground and was being attacked by a beast.")
+#               #time.sleep(5)
+                print("")
+                print("Deside carefully as this choice could effect the game and future events.")
+                print("")
+#               #time.sleep(4)
+            if gender=="woman":
+                print(name+" sits down at the table and opens the letter.")
+#               #time.sleep(2)
+                print(""" "Mrs. Narui, we regret to inform you that due to the recent blaze at the Polino's Furniture and Carvings in your area your slot and items within have been destroyed by the flames." """)
+#               #time.sleep(7)
+                print(""" "Because of this we have given to you the 40 pieces that you used to buy the slot and the items within.  We hope we haven't lost you as a loyal customer.  Sincerely, Polino's Furniture and Carvings" """)
+#               #time.sleep(7)
+                print("40 pieces have been added to your inventory")
+                time.sleep(3)
+                print("Holding the letter in her hand "+name+" was furious.  She had spent so much money on that slot and wood for her and her husband that it could make her rip the letter to shreds.")
+#               #time.sleep(7)
+                print("But her anger was interupted by the screams coming from outside.")
+#               #time.sleep(3)
+                print("Openning her front door "+name+" saw monsterous beasts chasing down and killing the neighbors and and workers in her community.")
+#                #time.sleep(5)
+                print("She instructed her children and husband to head for the cellar and meet her there.")
+#                #time.sleep(3)
+                print("But before she could join them her neighbor was pushed to the ground and was being attacked by a beast.")
+#                #time.sleep(5)
+                print("")
+                print("Deside carefully as this choice could effect the game and future events.")
+                print("")
+#                time.sleep(4)
 
             firstchoice="deside_time"
             while firstchoice=="deside_time":
                 print("Grab a knife from the kitchen and save your neighbor (Neighbor)")
                 print("")
-                time.sleep(4)
+#man                time.sleep(4)
                 print("or")
                 print("")
                 print("Run with your family to the cellar and help protect them (Family)")
@@ -282,15 +306,15 @@ while game=="running":
                 if dontmessup=="neighbor":
                     firstchoice="wasthatright"
                     print("You entered the kitchen, grabbed a knife, and have saved your neighbor but your family had a harder time entering the cellar.")
-                    time.sleep(4)
+#                    time.sleep(4)
                     choice1="neighbor"
+                    print("Your neighbor looks at you and thanks you before running away.")
+#                    time.sleep(3)
+                    print("You run to your family, get them into the cellar, and close the door and block it with an old bookshelf inside.")
+#                    time.sleep(5)
+                    print(""" "What took you so long?!  We almost were killed on the way here!" """)
+#                    time.sleep(3)
                     while choice1=="neighbor":
-                        print("Your neighbor looks at you and thanks you before running away.")
-                        time.sleep(3)
-                        print("You run to your family, get them into the cellar, and close the door and block it with an old bookshelf inside.")
-                        time.sleep(5)
-                        print("What took you so long?!  We almost were killed on the way here!")
-                        time.sleep(3)
                         if spouse=="Set":
                             print("What would you like to say to your wife?")
                             print("")
@@ -311,11 +335,18 @@ while game=="running":
                             incellar=evn1.lower()
 
                         if incellar=="truth":
-                            print("You tell ")
-                            print("Thank you for being honest but you really should've been here.")
+                            print("You tell "+spouse+" the truth")
+                            print(""" "Thank you for being honest but you really should've been here and helped move the cart." """)
+                            choice1="happened"
+                            cellar1="inside"
 
                         if incellar=="lie":
-                            print("")
+                            print("You tell "+spouse+" that your foot was caught on.")
+                            print(""" "That's why you were late?  You could've yelled for help." """)
+                            choice1="happened"
+                            cellar1="inside"
+
+
 
 
 
@@ -324,12 +355,104 @@ while game=="running":
                     print("You stayed with your family all the way to the cellar and helped them quickly get out of harms way but your neighbor has died.")
                     choice1="cellar"
                     while choice1=="cellar":
-                        print("You watch as your neighbor is killed in front of you, looking with pleading eyes.")
-                        time.sleep(4)
+                        print("You see your neighbor is killed in front of you, looking with pleading eyes but you run away as quick as you can.")
+#                        time.sleep(4)
                         print("You reach the cellar and helped push a cart that had been pushed over in front of the door away.")
-                        time.sleep(5)
-                        print("Thank you for helping.  I wouldn't have been able to push that cart on my own.")
-                        time.sleep(4)
+#                        time.sleep(5)
+                        print(""" "Thank you for helping.  I wouldn't have been able to push that cart on my own." """)
+#                        time.sleep(3)
+                        print("You and your family enter the cellar and block the door with an old bookshelf.")
+#                        time.sleep(3)
+                        cellar1="inside"
+
+
+                    while cellar1=="inside":
+                        cellar1="ininside"
+                        print(""" "Well I'm just thankful that we made it out of there safe.  What do you think those things were?" """)
+#                        time.sleep(4)
+                        print("You tell your wife that you've never seen anything like what that was.")
+#                        time.sleep(3)
+                        print(""" "They just came out of no where.  I could feel what I think was an earthquake and then they just appeared." """)
+#                        time.sleep(5)
+                        if dontmessup=="neighbor":
+                            print("Thinking about what you just saw out there your second child, Raffi, begins to scream out in pain.")
+#                            time.sleep(4)
+                            print("You look him over and see that he has been bitten on his arm and poisoned him.")
+#                            time.sleep(3)
+                            print("You tell him it will all be fine as you cut open the bite and start sucking out the poison.")
+#                            time.sleep(4)
+                            print("The sounds attracted the beasts outside and they began to break down the door to the cellar.")
+#                            time.sleep(4)
+                            quick=ly
+                        if dontmessup=="family":
+                            print("Suddenly you hear footsteps outside the cellar door followed by beasts attempting to break the door down.")
+#                            time.sleep(5)
+                            print("You realized that they followed you in here after you ran for your family.")
+#                            time.sleep(3)
+                            
+                        quick="ly"
+                        while quick=="ly":
+                            print("What do you want to do?")
+                            print("")
+                            print("Fight the beasts (Fight)")
+                            print("Find a way to flee (Flee)")
+                            print("Hide from the beasts (Hide)")
+                            evn2=input("")
+                            breakingin=evn2
+                            time.sleep(6)
+                            quick="er"
+                            print("You were to slow and were thrown against the wall by the beast, knocking you out.")
+                            aftermath="seeing"
+
+
+                        if breakingin==("fight"):
+                            quick=er
+                            if gender=="man":
+                                if dontmessup=="neighbor":
+                                    print("You grab the kitchen kife you grabbed and do your best to kill the beast but it throws you against the wall, knocking you out.")
+#                                    time.sleep(6)
+                                    quick="er"
+                                    aftermath="seeing"
+                            if gender=="man":
+                                if dontmessup=="family":
+                                    print("You grab a large stick that fell in the cellar do your best to kill the beast but it throws you against the wall, knocking you out.")
+#                                    time.sleep(6)
+                                    quick="er"
+                                    aftermath="seeing"
+                                    
+                            if gender=="woman":
+                                if dontmessup=="neighbor":
+                                    print("You hand "+spouse+" the kitchen knife you grabbed and tell him to kill the beast but it throws you against the wall, knocking you out.")
+#                                    time.sleep(7)
+                                    quick="er"
+                                    aftermath="seeing"
+                            if gender=="woman":
+                                if dontmessup=="family":
+                                    print("You watch as "+spouse+" grabs a branch that fell into the cellar and begins to attack the beast but the beast and the beast throws you against the wall, knocking you out.")
+#                                    time.sleep(8)
+                                    quick="er"
+                                    aftermath="seeing"
+
+                        if breakingin==("flee"):
+                            if gender=="man":
+                                print("You tell "+spouse+" to take Tarrel and Raffi and run out of the cellar but the beast throws you against the wall, knocking you out.")
+                                quick="er"
+                                aftermath="seeing"
+                            if gender=="woman":
+                                print("You grab Tarrel and Raffi and begin to run out of the cellar but the beast throws you against the wall, knocking you out.")
+                                quick="er"
+                                aftermath="seeing"
+
+                        if breakingin==("hide"):
+                            if gender=="man":
+                                print("You tell "+spouse+" to hide her and the children but before you can hide the beast throws you against the wall, knocking you out.")
+                                quick="er"
+                                aftermath="seeing"
+                            if gender=="woman":
+                                print("You take Tarrel and Raffi and hide but before you can the beast knocks you against the wall, knocking you out.")
+                                quick="er"
+                                aftermath="seeing"
+
 
 
                         
@@ -396,6 +519,10 @@ while game=="running":
                     else:
                         print("Please just pick something, I'm already stressed enough.")
                         time.sleep(3)
+
+                        while aftermath=="seeing":
+                            print("Game ending")
+                            game="stopping"
 
             
 
