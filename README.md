@@ -12,6 +12,6 @@ A name system where you can create your own name and 1 of 18 random names, a gen
 
 In the future the game will contain...
 
-1-1 and 45 minutes of content, a health system, a better item system, more main characters, more locations, more choices, a good back and forth system, possibly a puzzle system, and many more major choices.
+1-1 and 45 minutes of content, a health system, a better item system, more main characters, more locations, more choices, a good back and forth system, possibly a puzzle system, and more major choices.
 
 Also, all of the code here use Python.  Keep this in mind before attempting to play a version of the game.
